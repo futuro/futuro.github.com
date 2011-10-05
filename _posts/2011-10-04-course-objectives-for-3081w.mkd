@@ -1,0 +1,52 @@
+---
+layout: post
+title: Course Objectives for 3081W
+---
+# {{ page.title }}
+# License: BY-SA
+
+## Things I (probably) know
+
+### Version Control Software
+I have used a fair amount of VCS', though the two I am by far the most competent with are CVS and Git. I'm well versed
+with CVS because I spent a year working for a company in Medina, Minnesota which used CVS at the time. I used CVS on
+an almost daily basis.
+
+I attempted, honestly, to use CVS in a very Git like manner. Where as most people will commit into
+CVS once a day, because of how slow or awful a process committing can be, I wanted to commit in at least somewhat
+logical blocks. A commit isn't really useful if the changes inside of it are not logically connected.
+
+Take, for example, mixing whitespace changes and code changes in a commit. While reviewing, you won't really be able to
+think about the commit in a coherent manner, because everything is just mashed together. At some point, your brain melts
+into itself and you are no longer comprehending the code.
+
+This is a similar experience I have had with code reviews. Everyone sits together and tries to comprehend a piece of
+code, often a very large one. Since there is so much to take in, it's hard to create a good model of the affected code
+in your head, and you are left only catching syntax errors. This could be helped by taking the commits one at a time.
+Then you are breaking down the changes logically -- assuming the programmer made good commits, something which is super
+difficult in CVS unless planned ahead of time, but is a part of Git from the get-go -- and creating a good model is much
+easier. This also lets you do things like have a commit be all whitespace changes without pissing off the other people
+on your team, or worse, having your patches/commits be rejected all together.
+
+That aside, CVS is slow and rigid. I use it how it wants to be used, not how works best for me. That simple sentence is
+the sole reason why CVS should be avoided as much as possible. Bad tools make bad programmers. Bad programmers make bad
+programs, but that's not nearly as important as the creation of bad programmers.
+
+### Modular Software Design
+After I started reading Eric S. Raymond's [The Art of Unix Programming][taup],
+I started focusing more on what he calls the "Basics of the Unix Philosophy". I don't really have much to say about
+practicing good software design except that I spent probably the last four to five months at my last job trying to use
+those concepts in all programming I did, work or otherwise.
+
+## Things I don't know
+
+### Testing Frameworks
+My main interest in Testing Frameworks is regression testing. I'm not certain how to describe the frustration of not
+having regression tests, and finding out that a change you made broke something long after you changed it, especially if
+you're finding out while the project is in production.
+
+### Automation
+This is always of interest to me. There is nothing more satisfying than automating a tedious task, freeing up time in
+the future for solving interesting problems.
+
+[taup]: http://www.catb.org/~esr/writings/taoup/html/
