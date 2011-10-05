@@ -7,7 +7,7 @@ title: Course Objectives for 3081W
 
 ## <span style="text-decoration:underline">Things I (probably) know</span>
 
-### Version Control Software
+**Version Control Software**
 I have used a fair amount of VCS', though the two I am by far the most competent with are CVS and Git. I'm well versed
 with CVS because I spent a year working for a company in Medina, Minnesota which used CVS at the time. I used CVS on
 an almost daily basis.
@@ -32,7 +32,7 @@ That aside, CVS is slow and rigid. I use it how it wants to be used, not how wor
 the sole reason why CVS should be avoided as much as possible. Bad tools make bad programmers. Bad programmers make bad
 programs, but that's not nearly as important as the creation of bad programmers.
 
-### Modular Software Design
+**Modular Software Design**
 After I started reading Eric S. Raymond's [The Art of Unix Programming][taup],
 I started focusing more on what he calls the "Basics of the Unix Philosophy". I don't really have much to say about
 practicing good software design except that I spent probably the last four to five months at my last job trying to use
@@ -40,12 +40,12 @@ those concepts in all programming I did, work or otherwise.
 
 ## <span style="text-decoration:underline">Things I don't know</span>
 
-### Testing Frameworks
+**Testing Frameworks**
 My main interest in Testing Frameworks is regression testing. I'm not certain how to describe the frustration of not
 having regression tests, and finding out that a change you made broke something long after you changed it, especially if
 you're finding out while the project is in production.
 
-### Automation
+**Automation**
 This is always of interest to me. There is nothing more satisfying than automating a tedious task, freeing up time in
 the future for solving interesting problems.
 
