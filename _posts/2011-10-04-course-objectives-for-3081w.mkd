@@ -5,7 +5,7 @@ title: Course Objectives for 3081W
 # {{ page.title }}
 # License: BY-SA
 
-## **Things I (probably) know**
+## <span style="text-decoration:underline">Things I (probably) know</span>
 
 ### Version Control Software
 I have used a fair amount of VCS', though the two I am by far the most competent with are CVS and Git. I'm well versed
@@ -38,7 +38,7 @@ I started focusing more on what he calls the "Basics of the Unix Philosophy". I 
 practicing good software design except that I spent probably the last four to five months at my last job trying to use
 those concepts in all programming I did, work or otherwise.
 
-## **Things I don't know**
+## <span style="text-decoration:underline">Things I don't know</span>
 
 ### Testing Frameworks
 My main interest in Testing Frameworks is regression testing. I'm not certain how to describe the frustration of not
