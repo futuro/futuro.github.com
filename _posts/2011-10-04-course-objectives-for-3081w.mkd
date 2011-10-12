@@ -49,5 +49,5 @@ you're finding out while the project is in production.
 This is always of interest to me. There is nothing more satisfying than automating a tedious task, freeing up time in
 the future for solving interesting problems.
 
-# License: BY-SA
+# License: Creative Commons BY-SA
 [taup]: http://www.catb.org/~esr/writings/taoup/html/
