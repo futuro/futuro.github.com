@@ -1,0 +1,78 @@
+---
+layout: post
+title: Thoughts on multiplayer programming  
+---
+
+# {{ page.title }}
+
+## The more the merrier
+I have read about pair programming, though perhaps not at length, and I really like the idea. The problem, for me, is
+that I often feel like I'm being rushed.
+
+Don't get me wrong, the other person isn't rushing me at all, it just always feels like the other person
+is waiting to get at the keyboard and implement an idea they are having. This results in me feeling like I have no
+time to think or explore a problem domain, which means that I find little joy in programming in the process.
+
+Now, to be fair, the only pair programming I have done has been in school, and it is often with people who are similar
+to myself. That is, the person sitting idle is a sounding board, but not an active participant, in the programming
+process. That results in me disengaging from the code and having my mind wander, slowly grinding my mental gears
+down to nubs. Since I've only ever been either stressed or bored so thoroughly as to make any creative endeavor nigh
+impossible, I have a low opinion of pair programming as a personal coding practice.
+
+That doesn't mean, however, that I dislike working in a team. My best coding experiences have been when working on
+projects with other people. In fact, the social aspect of programming is part of what makes it so fulfilling to me. The
+things I find the most helpful when working on a team are code parties and work separation.
+
+## Who doesn't like to party?
+Code parties are like code reviews, except you don't sit in a meeting to do it. Instead, everyone resides wherever they
+are the most comfortable, they all jump into a real-time chat channel and then you read through the code at your own
+pace and ask questions of the original coder.
+
+Code parties overcome a couple of problems I have had with code reviews in the past. The first problem is that I have
+only ever done code reviews of full change sets. That is, when doing a code review, we didn't take the changes one
+commit at a time, but a whole branch at a time. Part of this, I suspect, is because we were using CVS for version
+control, and diffing every patch from the beginning of the branch to the end of the branch was a long and annoying
+process. Reasons aside, I seriously dislike that practice because you lose a lot of information in the process.
+
+For example, let's say that I am in branch Foo. Change sets 1-13 in this branch are informative and worthy of review,
+but change set 14 is a formatting change. Why a formatting change? Because the team was stupid and hadn't standardised
+on a style for the project yet, and I am stupid and think that branch Foo is just the place to do so. Now, since we're
+only looking at the cumulative change in the branch, versus a step by step view, the whole process is botched because
+the legitimate changes are covered up by the formatting changes.
+
+The second problem I have had with code reviews is mind rot. I don't read or comprehend code at the same pace as my
+coworkers/peers, but when you do a code review everyone has to read the code at the same pace. If you read faster than
+the code is being scrolled through, then you have a chance to comprehend it, but you also have a chance to suffer by
+waiting, resulting in your mind wandering or losing interest. If you read slower than the code is being scrolled
+through, you have to attempt to read extra fast so you can stay caught up, but you lose out on the chance to comprehend
+the code. This imbalance causes, in myself at least, the issue where I have trouble staying focused on the code for more
+than about a half hour. Either I'm perpetually waiting, causing me to lose focus, or I'm perpetually playing keep up,
+causing me to not comprehend the code, resulting in no useful comments on the code, which defeats the whole purpose of a
+code review.
+
+An issue I have had in the few attempts I've made to do a code party is that keeping track of the questions can be kind
+of hard. To resolve that issue I would probably implement some numbering scheme for questions, so you know which
+question is being discussed. This is just one idea of how to solve that problem, there are probably others.
+
+## You milk the cow, I'll bake the bread
+One of the biggest issues I've had in school in regards to working with others is that I often feel like there is a lot
+of duplication of work. Perhaps more accurately, what I desire from group programming in school is to have a parallel
+development process, where having more people actually means being able to get more done. What I encounter is more of a
+serial development process, where having more people means deciding who is doing what portion, and then waiting for
+someone to finish their bit before you can start yours. This can be frustrating if your partners work slower than you,
+and it can be stressful if you work slower than your partners. Someone, it seems, is either going to end up doing most
+of the work out of frustration, or everyone will be duplicating work by trying to fix a problem or implement a feature
+at the same time.
+
+This problem, where I feel like I'm constantly bumping into my partners, stems from, I think, the size of the projects
+you can create in most classes. They are never big, so the amount of differing work that can be done is quite small,
+which results in there only being one line of work to be done. I do not know of any programming method, aside from pair
+programming, that lets more than one person work on a problem in an efficient manner, though I would love to hear about
+it.
+
+## No conclusion isn't a conclusion
+If I had to list my biggest hopes for team programming in college it's that code parties become really popular (well, I
+hope that they become popular everywhere, but in college as well), and that my projects either become big enough for two
+people to code in them comfortably, or for me to figure out how to have two people code on a small project efficiently.
+
+# License: Creative Commons BY-SA  
