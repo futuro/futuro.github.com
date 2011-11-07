@@ -1,0 +1,96 @@
+---
+layout: post
+title: Digital time travel
+---
+# {{ page.title }}
+
+## The shortest intro
+
+Version control allows you to keep a history of the changes to your files. This saves you many
+hassles, the most obvious of which is worrying about making changes to a file, since you are able to
+revert back to a working state if the changes you made don't work. This benefit extends to branches,
+which are encapsulations of logically cohesive code. Branching thus gives you the ability to test
+out an idea without having to worry about interfering with any other development for a project you
+might wish to do.
+
+SVN is an implementation of version control. It was meant as an improvement on CVS, an earlier
+implementation of the version control concept, though I do not agree that they achieved their goal.
+
+## Datas about my datas
+
+*Caveat Emptor* I put very little effort into learning the intricacies of SVN, because, frankly,
+it's terrible. I'll go into that shortly, but keep it in mind.
+
+I strongly, *strongly*, disagree with the idea that repository metadata should be a part of the
+repository history. That is, no matter where in the repositories history you are, you should be able
+to reference repository metadata that was added in the future.
+
+For example, if I add a tag, marking revision 4837 as "Release 2.1", but then I need to check out
+revision 4830, I should still be able to see and reference the tag "Release 2.1". This is something
+that Mercurial gets wrong, in that I am unable to reference tag "Release 2.1" if I check out a
+revision less than or equal to 4837, since revision 4838 holds the tag "Release 2.1".
+
+SVN offends in this regard by lacking a tagging function what-so-ever. To tag in SVN you have to set
+up your directory in a fashion such as project\_name/project/{trunk,tags,branches}. That is, you
+would have three sub-directories of the project\_name/project/ directory, one for your trunk work,
+one for your tags, and one for your branches.
+
+I can't, for one reason or another, properly express the disgust this practice impresses upon me,
+but imagine I am making sick faces, or possibly flipping over tables and crying in rage. I feel
+similarly about Mercurial's practice of foregoing branches and instead cloning a repository into a
+new directory. It is a perverse thing, to be avoided.
+
+To explain my loathing for this practice, let me start by explaining what about SVN's use bothers
+me.
+
+Tags should not be whole copies of a directory. A tag is a reference to a revision, a version
+control pointer if you will. I cannot envision a tag as being anything but that; a bookmark to a
+certain point in time of the repository. My problem with it is that it breaks what is, to
+me, a fundamental property of tagging in version control.
+
+Now I will talk about what bothers me about the way that Mercurial has done it in the past (there
+are branches in Mercurial now, but my understanding is that culturally you clone into a new
+directory.)
+
+Making a branch by cloning into a new directory is slow. It's not just slow for the computer to
+complete the operation, but it is slow in developer time. I don't want to have to wait to branch out
+by cloning over to a new directory, and I have no desire what so ever to switch back and forth
+between those directories when I wish to do work on one branch or another. I have worked in a
+situation like that, and it is a constant pain. I have no desire to 'cd' to a directory just to start
+working on a branch; it takes more time, physically, to type it out, and it takes mental energy to
+figure out just where in my directory tree I need to go. Also, I don't want to keep copying the
+whole repository history over and over again (I could do a shallow copy, but then I can't gain easy
+access to the repository history, and I'm already doing something annoying, so it only compounds my
+frustration). If I don't use a new directory, then I never have to 'cd' anywhere, and all I need to
+think about is what branch I want to switch to. This saved me time and frustration, especially after
+a long day of coding where I have very little energy left to be devoted to things that aren't
+problems that need to be fixed.
+
+## Decisions, decisions
+
+I have, almost completely, glossed over what version control is. This is because that question has
+been covered both in depth and in short [elsewhere](https://secure.wikimedia.org/wikipedia/en/wiki/Version_control),
+and it made no sense to cover that here. What I did do was cover a couple things that have bothered
+me greatly about SVN, and to some extent Mercurial, which will hopefully give you some insight into
+what VCS system to use.
+
+I did not cover how to implement or maintain control over a "central server" if using Git (or
+Mercurial, though I wouldn't cover it because I don't know how to set that up as I don't use
+Mercurial). I hope to cover this in a future blog post, but the gist of it is that just because Git
+is a Distributed Version Control System, as opposed to SVN being a (Centralized) Version Control
+System, that doesn't mean that you have to *only* use it in a Distributed manner. In other words,
+you can utilize things like [gitolite](https://github.com/sitaramc/gitolite) to have a central
+repository that is the only place that is considered the true state of the repository. This gives
+you the flexibility of a DVCS, while maintaining control over the long term development of a
+project.
+
+## My Advice
+
+Don't use SVN. Or CVS. Or any Version Control System that forces you to follow some ill-thought out
+programming flow instead of whatever comes most naturally to you. This applies to your coding
+partners as well. It wastes time and energy trying to force your brain to work around design
+patterns that don't match up with your natural work flow. If you can work more efficiently, all of
+your co-workers can work more efficiently, and you can all do so in a cohesive manner, is there any
+reason not to?
+
+# License: Creative Commons BY-SA
